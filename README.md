@@ -1,5 +1,7 @@
 # Universally Unique Lexicographically Sortable Identifier
 
+[![Build Status](https://travis-ci.org/mmacedoeu/rulid.rs.svg?branch=master)](https://travis-ci.org/mmacedoeu/rulid.rs)
+
 UUID can be suboptimal for many uses-cases because:
 
 -   It isn't the most character efficient way of encoding 128 bits of randomness
