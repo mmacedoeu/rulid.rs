@@ -1,0 +1,10 @@
+[package]
+name = "rulid"
+version = "0.1.0"
+authors = ["mmacedoeu <contato@mmacedo.eu.org>"]
+
+[dependencies]
+base32 = { git = "https://github.com/andreasots/base32" }
+chrono = "*"
+byteorder = "*"
+rand = "*"
