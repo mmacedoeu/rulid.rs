@@ -1,6 +1,7 @@
 # Universally Unique Lexicographically Sortable Identifier
 
 [![Build Status](https://travis-ci.org/mmacedoeu/rulid.rs.svg?branch=master)](https://travis-ci.org/mmacedoeu/rulid.rs)
+[![Language (Rust)](https://img.shields.io/badge/powered_by-Rust-blue.svg)](http://www.rust-lang.org/)
 
 UUID can be suboptimal for many uses-cases because:
 
