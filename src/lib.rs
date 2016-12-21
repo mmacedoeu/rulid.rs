@@ -19,7 +19,7 @@ pub fn timeasbytearray(time: u64) -> Vec<u8> {
 
 pub fn encode_time(time: u64) -> String {
     let vec = timeasbytearray(time);
-    base32::encode(Alphabet::Crockford, &vec[2..9])
+    base32::encode(Alphabet::Crockford, &vec[2..8])
 }
 
 pub fn encode_random() -> String {
