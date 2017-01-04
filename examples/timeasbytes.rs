@@ -9,9 +9,10 @@ fn main() {
     for _ in 0..16 {
         let now = UTC::now();
         let time = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
-        let enct = rulid::timeasbytearray(time);
+        let mut enct = rulid::timeasbytearray(time);
+        println!("{:?}", enct);
+        rulid::left_shift_6bit(&mut enct[1..8]);
         thread::sleep(two_millis);
-
         println!("{:?}", enct);
     }
 }
