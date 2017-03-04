@@ -4,7 +4,7 @@ version = "0.3.0"
 authors = ["mmacedoeu <contato@mmacedo.eu.org>"]
 
 [dependencies]
-base32 = { git = "https://github.com/andreasots/base32" }
+base32 = "0.3.1"
 chrono = "*"
 byteorder = "~0.5"
 rand = "*"
