@@ -2,6 +2,10 @@
 name = "rulid"
 version = "0.3.0"
 authors = ["mmacedoeu <contato@mmacedo.eu.org>"]
+description = "Rust Universally Unique Lexicographically Sortable Identifier"
+repository = "https://github.com/mmacedoeu/rulid.rs"
+keywords = ["ulid", "uuid","bytes","character","miliseconds","efficiency","universal"]
+categories = ["encoding", "date-and-time","data-structures","parsing","value-formatting"]
 
 [dependencies]
 base32 = "0.3.1"
