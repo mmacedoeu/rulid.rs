@@ -3,18 +3,18 @@ extern crate chrono;
 extern crate base32;
 
 use std::{thread, time};
-use chrono::UTC;
+use chrono::Utc;
 
 #[test]
 fn test2millistime() {
     let two_millis = time::Duration::from_millis(2);
-    let mut now = UTC::now();
+    let mut now = Utc::now();
     let mut time = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
     let enct1 = rulid::encode_time(time);
 
     thread::sleep(two_millis);
 
-    now = UTC::now();
+    now = Utc::now();
     time = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
     let enct2 = rulid::encode_time(time);
 
@@ -24,13 +24,13 @@ fn test2millistime() {
 #[test]
 fn test1millistime() {
     let two_millis = time::Duration::from_millis(1);
-    let mut now = UTC::now();
+    let mut now = Utc::now();
     let mut time = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
     let enct1 = rulid::encode_time(time);
 
     thread::sleep(two_millis);
 
-    now = UTC::now();
+    now = Utc::now();
     time = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
     let enct2 = rulid::encode_time(time);
 

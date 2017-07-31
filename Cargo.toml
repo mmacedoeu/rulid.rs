@@ -1,16 +1,15 @@
 [package]
 name = "rulid"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["mmacedoeu <contato@mmacedo.eu.org>"]
 description = "Rust Universally Unique Lexicographically Sortable Identifier"
 repository = "https://github.com/mmacedoeu/rulid.rs"
 keywords = ["ulid", "uuid","bytes","identifier","universal"]
 categories = ["encoding", "date-and-time","data-structures","parsing","value-formatting"]
-license = "MIT"
 license-file = "LICENSE"
 
 [dependencies]
 base32 = "0.3.1"
-chrono = "^0"
-byteorder = "~0.5"
+chrono = "0.4.0"
+byteorder = "1.1"
 rand = "^0.3.15"

@@ -5,7 +5,7 @@ extern crate rand;
 
 use byteorder::{ByteOrder, BigEndian};
 use base32::Alphabet;
-use chrono::UTC;
+use chrono::Utc;
 use rand::os::OsRng;
 use rand::Rng;
 use std::ascii::AsciiExt;
@@ -271,7 +271,7 @@ pub fn gen_random<R: Rng>(mut rng: R) -> Vec<u8> {
 }
 
 pub fn ulid() -> String {
-    let now = UTC::now();
+    let now = Utc::now();
     let time: u64 = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
     let enct = encode_time(time);
     String::new() + &enct[enct.len() - 10..] + encode_random().as_str()
@@ -353,7 +353,7 @@ fn test_encode_random_len() {
 
 #[test]
 fn test_timeasbytearray() {
-    let now = UTC::now();
+    let now = Utc::now();
     let time: u64 = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
     let _ = timeasbytearray(time);
     assert!(true);
@@ -361,7 +361,7 @@ fn test_timeasbytearray() {
 
 #[test]
 fn test_encode_time() {
-    let _ = encode_time(UTC::now().timestamp() as u64);
+    let _ = encode_time(Utc::now().timestamp() as u64);
     assert!(true);
 }
 

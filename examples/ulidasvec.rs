@@ -8,7 +8,7 @@ fn main() {
     for _ in 0..16 {
         // let time = now.timestamp() as u64 * 1000 + now.timestamp_subsec_millis() as u64;
         let ulid = rulid::ulid();
-        // let now = UTC::now();
+        // let now = Utc::now();
         let as_vec = rulid::as_vec(ulid.as_str()).unwrap();
         let (umsr, ulsr) = rulid::as_u64tuple(ulid.as_str()).unwrap();
         let (imsr, ilsr) = rulid::as_i64tuple(ulid.as_str()).unwrap();
